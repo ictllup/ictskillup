@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Topics</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hide the okay button initially */
+        .okay-btn {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <nav>
+            <ul>
+                <li><a href="#" id="home-btn">Home</a></li>
+                <li><a href="#" id="back-btn">Back</a></li>
+                <li><a href="#" id="audio-btn">Audio</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="topics-container">
+        <h1>SPREED SHEET 1</h1>
+        <select id="intro-select">
+            <option value="#">Select a subtopic</option>
+            <option value="Excel 1.html">Commonly Used Spreedsheets</option>
+            <option value="Excel 2.html">Starting MS Execel 2016 Interface</option>
+            <option value="Excel 3.html">Working with Spreedsheets</option>
+            <option value="Excel 4.html">Navigating through a Spreedsheet</option>
+           <option value="Excel 5.html">Selecting a Range of Cells</option>
+           <option value="Excel 6.html">Inserting Rows and Columns</option>
+           <option value="Excel 7.html">Resizing Rows and Columns</option>
+           <option value="Excel 8.html">Sorting Data</option>
+           <option value="Excel 9.html">Using Charts in Excel</option>
+           <option value="Excel 10.html">Headers and Footers</option>
+           <option value="Excel 11.html">Printing Worksheets and Workbooks</option>
+           <option value="Excel 12.html">Quick Check Puzzle</option>
+           <option value="Excel 13.html">Sample Activity </option>
+          </select>
+          <button class="okay-btn" id="intro-okay-btn">Okay</button>
+
+          <div class="topics-container">
+            <h1>ELECTRONIC PRESENTATION</h1>
+            <select id="intro select">
+                <option value="Meaning.HTML">SELECT SUBTOPIC</option>
+                <option value="Electronic Presentation 1.html">Meaning of a Presentation Software</option>
+                <opion value="Electronic Presentation 2.html">Starting MS PowerPoint 2016 interface</opion>
+                <option value="Electronic Presentation 3.html">MS PowerPoint interface features </option>
+                <option value="Electronic Presentation 4.html">Guidelines to Creating Presentations</option>
+                <option value="Electronic Presentation 5.html">Creating and Saving a Presentation</option>
+                <option value="Electronic Presentation 6.html">Adding and Deleting Slides</option>
+                <option value="Electronic Presentation 7.html">Using Slide Layouts</option>
+                <option value="Electronic Presentation 8.html">Viewing a Presentation</option>
+                <option value="Electronic Presentation 9.html">Adding Text to Slides</option>
+                <option value="Electronic Presentation 10.html">Inserting Header and Footer</option>
+                <option value="Electronic Presentation 11.html">Adding ffects to a PowerPoint Presentation</option>
+                <option value="Electronic Presentation 12.html">Printing a Presentation</option>
+                <option value="Electronic Presentation 13.html">Quick Check Puzzle</option>
+                <option value="Electronic Presentation 14.html">Sample Activity of Integration 2</option>
+            </select>
+            <button class="Okay-btn" id="intro-okay-btn">Okay</button>
+            </div>
+
+            <div class="topics-container">
+                <h1>INFORMATION ACCESS AND SHARING</h1>
+                <select id="intro-select">
+                    <option>SELECT A SUBTOPIC</option>
+                    <option value="INFORMATION1.HTML">Information Access</option>
+                    <option value="INFORMATION2.HTML">Information Sharing</option>
+                    <option value="INFORMATION3.HTML">Using ICTs for Information Access and Sharing</option>
+                    <option value="INFORMATION4.HTML">Digital Divide</option>
+                    <option value="INFORMATION5.HTML">Sample Activity</option>
+                </select>
+                <button class="okay-btn" id="intro-okay-btn">OKAY</button>
+            </div>
+
+
+            <div class="topics topics-container">
+                <h1>HEALTH AND SAFETY</h1>
+                <select id="intro select">
+                    <option>SELECT SUBTOPIC</option>
+                    <option value="Health 1.html">Health Problems associated with Prolonged use of ICTs</option>
+                    <option value="Health 2.html">Sensitising About Health AND Safety while using ICTs</option>
+                    <option value="Health 3.html">Qiuck Check Puzzle</option>
+                    <option value="Health 4.html">Sample Activity of Integration 4</option>
+                </select>
+                <button class="Okay-btn" id="into-okay-btn">Okay</button>
+            </div>
+
+
+
+    <script>
+        // Show the okay button when a subtopic is selected
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', () => {
+                if (select.value !== '') {
+                    select.nextElementSibling.style.display = 'block';
+                } else {
+                    select.nextElementSibling.style.display = 'none';
+                }
+            });
+        });
+
+        // Handle the okay button click
+        document.querySelectorAll('.okay-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Get the selected subtopic value
+                const selectedValue = btn.previousElementSibling.value;
+                // Redirect to the next page
+                window.location.href = selectedValue;
+            });
+        });
+    </script>
+</body>
+</html>

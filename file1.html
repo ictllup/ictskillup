@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creating and Saving a File</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cover">
+        <nav>
+            <ul>
+                <li><a href="student-s1.html" id="home-btn">Home</a></li>
+                <li><a href="topics1.html" id="back-btn">Back</a></li>
+                <li><a href="#" id="audio-btn" onclick="toggleAudio()">Audio</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="topics-container">
+	<!-- Your content here -->
+    <h2>Creating and Saving a File</h2>
+    <h3>Creating a File</h3>
+    <ol>
+        <li>Open a program or application that allows you to create and edit files.</li>
+        <li>Click on the "File" menu and select "New" or press the keyboard shortcut.</li>
+        <li>Choose the type of file you want to create.</li>
+        <li>Enter a name for your file in the "File name" or "Save as" field.</li>
+        <li>Choose a location to save your file.</li>
+        <li>Click "Save" or press the keyboard shortcut.</li>
+    </ol>
+
+    <h3>Saving a File</h3>
+    <ol>
+        <li>Once you have created a file, you can save it by clicking on the "File" menu and selecting "Save" or pressing the keyboard shortcut.</li>
+        <li>If you have already saved your file, you can save it again to update the changes you have made.</li>
+        <li>You can also save a copy of your file by selecting "Save As" and choosing a new location and file name.</li>
+    </ol>
+
+    <h2>File Formats</h2>
+    <p>Different programs use different file formats, such as .docx, .txt, .jpg, etc. Make sure to choose the correct file format for your needs.</p>
+
+    <h2>File Names</h2>
+    <p>Choose a descriptive and unique name for your file. Avoid using special characters or spaces in file names.</p>
+
+    <h2>File Locations</h2>
+    <p>Choose a location that is easy to remember and access, such as your desktop or documents folder. Consider organizing your files into folders and subfolders.</p>
+    </div>
+
+    <div class="audio-player" style="display: none;">
+        <audio controls>
+          <source src="audio/file2.wav" type="audio/mp3">
+        </audio>
+      </div>
+
+    <script>
+        function toggleAudio() {
+            var audioPlayer = document.querySelector('.audio-player');
+            if (audioPlayer.style.display === 'none') {
+                audioPlayer.style.display = 'block';
+            } else {
+                audioPlayer.style.display = 'none';
+            }
+        }
+    </script>
+    </div>
+    <div class="topics-container">
+
+        
+    </div>
+</body>
+</html>

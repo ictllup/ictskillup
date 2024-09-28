@@ -1,0 +1,119 @@
+<html lang="en">
+
+                   <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Topics</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hide the okay button initially */
+        .okay-btn {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <nav>
+            <ul>
+                <li><a href="#" id="home-btn">Home</a></li>
+                <li><a href="#" id="back-btn">Back</a></li>
+                <li><a href="#" id="audio-btn">Audio</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="topics-container">
+      <h2>Word Processing 2</h2>
+      <select id="intro-select">
+          <option value="">Select a subtopic</option>
+          <option value="word1.html">Introduction</option>
+          <option value="word2.html">Images with Text Wrapping</option>
+          <option value="word3.html">Footnotes and Endnotes</option>
+          <option value="word4.html">Multiple Column Layout</option>
+          <option value="word5.html">Using page breaks and section breaks in a Document</option>
+         <option value="word6html">Using a watermark in a Document</option>
+         <option value="word7.html">Table of content</option>
+         <option value="word8.html">Password to aDocument</option>
+         <option value="word9.html">Mail merge and table formulas</option>
+         <option value="word10.html">Creating Equations</option>
+         <option value="word11.html">TEST</option>
+        
+           <select>
+             <button class="okay-btn" id="intro-okay-btn">Okay</button>
+          <h2>Spreadsheet 2</h2>
+          <select id="intro-select">
+              <option value="">Select a subtopic</option>
+              <option value="Excel 1.html">Introduction</option>
+              <option value="Excel 2.html">Generating Charts</option>
+              <option value="Excel 3.html">Working with Chart Formatting</option>
+              <option value="Excel 4.html">Filtering data</option>
+              <option value="Excel 5.html">Cell References</option>
+             <option value="Excel 6html">Page setup</option>
+             <option value="Excel 7.html">Excel Error Messages</option>
+             <option value="Excel 8.html">Working with Advanced Functions</option>
+             <option value="Excel 9.html">Workbook Views</option>
+             <option value="Excel 10.html">TEST</option>
+           <select>  
+            <button class="okay-btn" id="new-okay-btn">Okay</button>
+          <h2>Electronic Publication</h2>
+          <select id="intro-select">
+              <option value="">Select a subtopic</option>
+              <option value="Electronic Presentation 1.html">Introduction</option>
+              <option value="Electronic Presentation 2.html">Navigating Publication Software</option>
+              <option value="Electronic Presentation 3.html">Using a templete and Blank Page to Create a Publication</option>
+              <option value="Electronic Presentation 4.html">Designing Various Publications</option>
+              <option value="Electronic Presentation 5.html">Printing a Publication</option>
+             <option value="Electronic Presentation 6.html">TEST</option>
+            
+             <select>
+              <button class="okay-btn" id="intro-okay-btn">Okay</button>
+             <h2>Database Management Systems</h2>
+             <select id="intro-select">
+                 <option value="">Select a subtopic</option>
+                 <option value="mean.html">Introduction</option>
+                 <option value="comp.html">Launching MS Access Database</option>
+                 <option value="mean.html">Database Objects</option>
+                 <option value="cycle.html">Creating Forms</option>
+                 <option value="uses.html">Querying the Database</option>
+                <option value="care.html">Generating Reports</option>
+                <option value="cycle.html">Relational Database</option>
+              <option value="uses.html">Printing Database Objects</option>
+             <option value="care.html">TEST</option>
+             <button class="okay-btn" id="intro-okay-btn">Okay</button>
+          
+
+
+            <h2>TOPIC</h2>
+            <select id="new-select">
+                <option value="">Select a subtopic</option>
+                <option value="newtopic.html"></option>
+              </select>
+              <button class="okay-btn" id="new-okay-btn">Okay</button>
+
+    </div>
+
+    <script>
+        // Show the okay button when a subtopic is selected
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', () => {
+                if (select.value !== '') {
+                    select.nextElementSibling.style.display = 'block';
+                } else {
+                    select.nextElementSibling.style.display = 'none';
+                }
+            });
+        });
+
+        // Handle the okay button click
+        document.querySelectorAll('.okay-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Get the selected subtopic value
+                const selectedValue = btn.previousElementSibling.value;
+                // Redirect to the next page
+                window.location.href = selectedValue;
+            });
+        });
+    </script>
+</body>
+</html>

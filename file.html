@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Folder and File Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cover">
+        <nav>
+            <ul>
+                <li><a href="student-s1.html" id="home-btn">Home</a></li>
+                <li><a href="topics1.html" id="back-btn">Back</a></li>
+                <li><a href="#" id="audio-btn" onclick="toggleAudio()">Audio</a></li>
+            </ul>
+        </nav>
+      
+
+
+    </div>
+    <div class="topics-container">
+	<!-- Your content here -->
+    <h1>Folder and File Management Guide</h1>
+
+    <h2>Introduction</h2>
+    <p>Folder and file management refers to the process of organizing, storing, and retrieving files and folders on a computer system.</p>
+
+    <h2>Importance of Folder and File Management</h2>
+    <ul>
+        <li>Efficiently storing and retrieving files</li>
+        <li>Reducing clutter and disorganization</li>
+        <li>Improving productivity and workflow</li>
+        <li>Enhancing data security and backup</li>
+        <li>Simplifying file sharing and collaboration</li>
+    </ul>
+
+    <h2>Key Concepts</h2>
+    <dl>
+        <dt>Folders</dt>
+        <dd>A virtual container used to store files and subfolders.</dd>
+        <dt>Subfolders</dt>
+        <dd>A folder within a folder.</dd>
+        <dt>Files</dt>
+        <dd>An individual document, image, video, or other digital content.</dd>
+        <dt>File Extensions</dt>
+        <dd>A three-letter code indicating file type.</dd>
+        <dt>File Paths</dt>
+        <dd>The location of a file or folder within the hierarchical structure.</dd>
+    </dl>
+
+    <h2>Best Practices</h2>
+    <ul>
+        <li>Use clear and descriptive folder and file names</li>
+        <li>Create a logical and consistent folder structure</li>
+        <li>Use subfolders to categorize and organize files</li>
+        <li>Avoid deep folder hierarchies</li>
+        <li>Regularly backup important files and folders</li>
+    </ul>
+
+    <h2>Common Folder and File Management Tasks</h2>
+    <ul>
+        <li>Creating and renaming folders and files</li>
+        <li>Moving and copying files and folders</li>
+        <li>Deleting files and folders</li>
+        <li>Searching for files and folders</li>
+        <li>Managing file permissions and access</li>
+    </ul>
+
+    <h2>Definitions</h2>
+    <h3>1. Folder</h3>
+    <p>A folder is a virtual container used to store files and subfolders.</p>
+    <h3>2. Subfolder</h3>
+    <p>A subfolder is a folder within a folder.</p>
+    <h3>3. File</h3>
+    <p>A file is a individual document, image, video, or other digital content.</p>
+    <h3>4. File Extension</h3>
+    <p>A file extension is a three-letter code indicating file type.</p>
+    <h3>5. File Path</h3>
+    <p>A file path is the location of a file or folder within the hierarchical structure.</p>
+    <h3>6. Directory</h3>
+    <p>A directory is another term for a folder.</p>
+    <h3>7. Root Directory</h3>
+    <p>The root directory is the top-most folder in the hierarchical structure.</p>
+    <h3>8. Parent Folder</h3>
+    <p>The parent folder is the folder that contains a subfolder or file.</p>
+    <h3>9. Child Folder</h3>
+    <p>The child folder is a subfolder within a parent folder.</p>
+
+
+
+    </div>
+
+    <div class="audio-player" style="display: none;">
+        <audio controls>
+          <source src="audio/file1.wav" type="audio/mp3">
+        </audio>
+      </div>
+
+    <script>
+        function toggleAudio() {
+            var audioPlayer = document.querySelector('.audio-player');
+            if (audioPlayer.style.display === 'none') {
+                audioPlayer.style.display = 'block';
+            } else {
+                audioPlayer.style.display = 'none';
+            }
+        }
+    </script>
+    </div>
+    <div class="topics-container">
+
+        
+    </div>
+</body>
+</html>

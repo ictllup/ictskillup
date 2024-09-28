@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:3000/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./CSS Guide_files/___vscode_livepreview_injected_script"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: rgb(32, 23, 85);
+            color: white;
+            padding: 10px 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 5px 0;
+        }
+        nav ul li a {
+            color: rgb(21, 200, 255);
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #eaeaea;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Guide</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:3000/index.html#introduction">Introduction to CSS</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#types">Types of CSS</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#syntax">CSS Syntax</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#selectors">Selectors</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#box-model">The CSS Box Model</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#background">Background Design</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#typography">Typography and Font Design</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#flexbox">Layout with Flexbox</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#grid">Grid Layout</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#styling">Styling</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#media-queries">Media Queries (Responsive Design)</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#forms">Styling Forms</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#accessibility">Accessibility and Contrast</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="introduction">
+            <h2>Introduction to CSS</h2>
+            <p>CSS (Cascading Style Sheets) is a language used to describe the presentation of web pages, including layout, colors, and fonts. It helps separate content (HTML) from design, making websites easier to maintain and style.</p>
+            <p>CSS enhances the user experience by allowing for consistent styling across multiple web pages and by making it easier to apply and maintain styles.</p>
+        </section>
+        <section id="types">
+            <h2>Types of CSS</h2>
+            <h3>Inline CSS</h3>
+            <p>Inline CSS involves applying styles directly within an HTML element using the <code>style</code> attribute.</p>
+            <pre><code>&lt;h1 style="color: blue;"&gt;This is a heading&lt;/h1&gt;</code></pre>
+            <p>Best for quick, specific styling on a single element.</p>
+            <h3>Internal (Embedded) CSS</h3>
+            <p>Internal CSS is written inside a <code>&lt;style&gt;</code> tag within the <code>&lt;head&gt;</code> section of an HTML document.</p>
+            <pre><code>&lt;head&gt;
+    &lt;style&gt;
+        h1 {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+            <p>Ideal for styling a single page when external stylesheets are not necessary.</p>
+            <h3>External CSS</h3>
+            <p>External CSS is written in a separate file with a <code>.css</code> extension and linked to the HTML document using the <code>&lt;link&gt;</code> tag.</p>
+            <pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+            <p>Best for applying consistent styles across multiple pages, enabling easier maintenance and organization of styles.</p>
+        </section>
+        <section id="syntax">
+            <h2>CSS Syntax</h2>
+            <p>The basic structure of CSS consists of selectors, properties, and values.</p>
+            <pre><code>p {
+    color: blue; /* Property: color, Value: blue */
+    font-size: 16px; /* Property: font-size, Value: 16px */
+}</code></pre>
+        </section>
+        <section id="selectors">
+            <h2>Selectors</h2>
+            <h3>Element Selector</h3>
+            <p>Targets all instances of a specific HTML element.</p>
+            <pre><code>p {
+    color: blue;
+}</code></pre>
+            <h3>Class Selector</h3>
+            <p>Targets elements with a specific class attribute.</p>
+            <pre><code>.myClass {
+    color: green;
+}</code></pre>
+            <h3>ID Selector</h3>
+            <p>Targets a single element with a specific ID attribute.</p>
+            <pre><code>#myID {
+    color: red;
+}</code></pre>
+            <h3>Combinators</h3>
+            <p>Define relationships between elements.</p>
+            <h4>Descendant Selector</h4>
+            <pre><code>div p {
+    color: gray; /* Selects all &lt;p&gt; inside &lt;div&gt; */
+}</code></pre>
+            <h4>Child Selector</h4>
+            <pre><code>div &gt; p {
+    color: black; /* Selects direct children &lt;p&gt; of &lt;div&gt; */
+}</code></pre>
+            <h3>Pseudo-Classes</h3>
+            <p>Apply styles based on the state of an element.</p>
+            <pre><code>a:hover {
+    color: orange; /* Changes link color when hovered */
+}</code></pre>
+            <h3>Pseudo-Elements</h3>
+            <p>Style specific parts of an element.</p>
+            <pre><code>p::first-line {
+    font-weight: bold; /* Styles the first line of a paragraph */
+}</code></pre>
+        </section>
+        <section id="box-model">
+            <h2>The CSS Box Model</h2>
+            <p>The box model is a fundamental concept that dictates the space an element occupies on a web page. It consists of:</p>
+            <ul>
+                <li><strong>Content:</strong> The actual content inside the element (e.g., text, images).</li>
+                <li><strong>Padding:</strong> Space between the content and the element's border.</li>
+                <li><strong>Border:</strong> A line surrounding the padding (or content if no padding is set).</li>
+                <li><strong>Margin:</strong> Space outside the border, separating the element from neighboring elements.</li>
+            </ul>
+            <pre><code>div {
+    width: 200px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 20px;
+}</code></pre>
+        </section>
+        <section id="background">
+            <h2>Background Design</h2>
+            <h3>Background Color</h3>
+            <p>The <code>background-color</code> property sets the background color of an element.</p>
+            <pre><code>body {
+    background-color: #f4f4f4; /* Light gray background */
+}</code></pre>
+            <h3>Background Image</h3>
+            <p>Use the <code>background-image</code> property to set an image as the background.</p>
+            <pre><code>body {
+    background-image: url('images/background.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
+}</code></pre>
+            <h3>Gradient Backgrounds</h3>
+            <p>Gradients can create smooth transitions between colors using <code>linear-gradient()</code> or <code>radial-gradient()</code>.</p>
+            <pre><code>body {
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient from left to right */
+}</code></pre>
+        </section>
+        <section id="typography">
+            <h2>Typography and Font Design</h2>
+            <h3>Font Family</h3>
+            <p>The <code>font-family</code> property specifies the typeface to be used.</p>
+            <pre><code>body {
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+}</code></pre>
+            <h3>Font Size</h3>
+            <p>The <code>font-size</code> property sets the size of the font.</p>
+            <pre><code>p {
+    font-size: 16px; /* Standard size for paragraphs */
+}
+
+h1 {
+    font-size: 36px; /* Larger font size for headings */
+}</code></pre>
+            <h3>Font Weight</h3>
+            <p>The <code>font-weight</code> property controls the thickness of the text.</p>
+            <pre><code>h1 {
+    font-weight: bold; /* Bold font */
+}
+
+p {
+    font-weight: normal; /* Normal font weight */
+}</code></pre>
+            <h3>Font Style</h3>
+            <p>The <code>font-style</code> property can be used to italicize text.</p>
+            <pre><code>em {
+    font-style: italic; /* Italic text */
+}</code></pre>
+            <h3>Line Height</h3>
+            <p>The <code>line-height</code> property controls the space between lines of text, enhancing readability.</p>
+            <pre><code>p {
+    line-height: 1.6; /* Adds space between lines for better readability */
+}</code></pre>
+            <h3>Text Align</h3>
+            <p>The <code>text-align</code> property specifies the horizontal alignment of text within an element.</p>
+            <pre><code>h1 {
+    text-align: center; /* Centers the heading */
+}
+
+p {
+    text-align: justify; /* Justifies the paragraph text */
+}</code></pre>
+        </section>
+        <section id="flexbox">
+            <h2>Layout with Flexbox</h2>
+            <p>Flexbox (Flexible Box Layout) is a CSS layout model designed to distribute space along a single axis (either horizontal or vertical) and align items within a container.</p>
+            <h3>Key Properties</h3>
+            <ul>
+                <li><code>display: flex;</code>: Defines a flex container and enables flex context for all its children.</li>
+                <li><code>justify-content</code>: Aligns items along the main axis (default is horizontal).</li>
+                <li><code>flex-start</code>: Aligns items to the start of the container.</li>
+                <li><code>center</code>: Centers items.</li>
+                <li><code>space-between</code>: Distributes items with space between them.</li>
+                <li><code>space-around</code>: Distributes items with space around them.</li>
+                <li><code>align-items</code>: Aligns items along the cross axis (default is vertical).</li>
+                <li><code>flex-start</code>: Aligns items to the start of the container.</li>
+                <li><code>center</code>: Centers items.</li>
+                <li><code>flex-end</code>: Aligns items to the end of the container.</li>
+                <li><code>stretch</code>: Stretches items to fill the container.</li>
+            </ul>
+            <pre><code>&lt;div class="container"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <pre><code>.container {
+    display: flex;
+    justify-content: space-between; /* Align items horizontally with space between */
+    align-items: center; /* Align items vertically in the center */
+    background-color: #f4f4f4;
+}
+
+.item {
+    flex: 1; /* Each item will grow equally */
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+}</code></pre>
+        </section>
+        <section id="grid">
+            <h2>Grid Layout</h2>
+            <p>CSS Grid Layout provides a two-dimensional grid-based layout system that lets you design complex layouts easily.</p>
+            <h3>Key Properties</h3>
+            <ul>
+                <li><code>display: grid;</code>: Defines a grid container.</li>
+                <li><code>grid-template-columns</code>: Defines the number and size of columns.</li>
+                <li><code>repeat(3, 1fr)</code>: Creates 3 columns, each taking up one fraction of the available space.</li>
+                <li><code>grid-template-rows</code>: Defines the number and size of rows.</li>
+                <li><code>gap</code>: Specifies the space between grid items.</li>
+            </ul>
+            <pre><code>&lt;div class="grid-container"&gt;
+    &lt;div class="grid-item"&gt;1&lt;/div&gt;
+    &lt;div class="grid-item"&gt;2&lt;/div&gt;
+    &lt;div class="grid-item"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px; /* Space between grid items */
+}
+
+.grid-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+}</code></pre>
+        </section>
+        <section id="styling">
+            <h2>Styling</h2>
+            <h3>Colors and Backgrounds</h3>
+            <pre><code>body {
+    background-color: #f4f4f4; /* Light gray background for the entire page */
+}
+
+.header {
+    background-color: #333; /* Dark background for header */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Space inside header */
+}</code></pre>
+            <h3>Fonts</h3>
+            <pre><code>h1 {
+    font-family: 'Arial', sans-serif; /* Font family for headings */
+    font-size: 2em; /* Larger font size for headings */
+    color: #333; /* Dark gray text color */
+}
+
+p {
+    font-family: 'Georgia', serif; /* Font family for paragraphs */
+    font-size: 1em; /* Standard font size for paragraphs */
+    line-height: 1.6; /* Increased line height for readability */
+}</code></pre>
+            <h3>Spacing</h3>
+            <pre><code>.container {
+    margin: 0 auto; /* Center container horizontally */
+    padding: 20px; /* Space inside container */
+}
+
+.box {
+    margin-bottom: 15px; /* Space below each box */
+}</code></pre>
+            <h3>Borders</h3>
+            <pre><code>.box {
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Space inside the box */
+}</code></pre>
+        </section>
+        <section id="media-queries">
+            <h2>Media Queries (Responsive Design)</h2>
+            <p>Media queries allow you to apply CSS rules based on the device's characteristics, such as screen width.</p>
+            <pre><code>@media (max-width: 768px) {
+    body {
+        background-color: #fff; /* Changes background color on smaller screens */
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Stacks items in a single column */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjusts heading size on smaller screens */
+    }
+}</code></pre>
+        </section>
+        <section id="forms">
+            <h2>Styling Forms</h2>
+            <pre><code>input[type="text"] {
+    width: 100%; /* Full width of its container */
+    padding: 10px; /* Space inside the input field */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Space inside the button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}</code></pre>
+        </section>
+        <section id="accessibility">
+            <h2>Accessibility and Contrast</h2>
+            <pre><code>body {
+    color: #333; /* Dark text color for readability */
+    background-color: #fff; /* White background */
+}
+
+a {
+    color: #007bff; /* Blue link color */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
+}</code></pre>
+        </section>
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>These notes cover fundamental CSS concepts and techniques to help you style web pages effectively. By understanding and applying these properties, you can create visually appealing and well-structured web content.</p>
+        </section>
+    </div>
+
+
+</body></html>

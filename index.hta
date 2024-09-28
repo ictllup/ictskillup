@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ICT Skill Up</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Start Page -->
+	<div class="container" id="start-page">
+		<h1>ICT Skill Up</h1>
+		<button id="start-btn" >Start</button>
+		<br>
+		<hr>
+		<h1>Created by the ICT club Mbazzi Riverside High Schoool</h1>
+		<hr>
+	</div>
+	<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo1").innerHTML = "How are you?";
+  document.getElementById("demo2").innerHTML = "welcome to the ICTSKILLUP LAIBRARY";
+  document.getElementById("demo3").innerHTML = "Created by the ICT club Mbazzi Riverside High Schoool";
+}
+</script>
+	<!-- Role Selection Page -->
+	<div class="role-selection" style="display: none;">
+		<h1>Choose Your Role</h1>
+		<button id="teacher-btn">Teacher</button>
+		<button id="student-btn">Student</button>
+	</div>
+	
+	<!-- Sign In Page -->
+	<div class="sign-in" style="display: none;">
+		<h1>Sign In</h1>
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" id="name">
+			<br>
+			<label for="class">Class:</label>
+			<select id="class-select">
+				<option value="s1">S1</option>
+				<option value="s2">S2</option>
+				<option value="s3">S3</option>
+				<option value="s4">S4</option>
+				<option value="s5">S5</option>
+				<option value="s6">S6</option>
+			</select>
+			<br>
+			<label for="student-number">Student Number:</label>
+			<input type="text" id="student-num">
+			<br>
+			<label for="password">Password:</label>
+			<input type="password" id="password">
+			<br>
+			<button id="submit-btn">Submit</button>
+		</form>
+	</div>
+	
+	<!-- Navigation Buttons -->
+	<button id="home-btn">Home</button>
+	<button id="back-btn">Back</button>
+	<button id="audio-btn">Virtual Work</button>
+
+<!-- Topic Selection Page -->
+<div class="topic-selection" style="display: none;">
+	<h1>Choose Topic Type</h1>
+	<button id="notes-btn">Notes</button>
+	<button id="videos-btn">Videos</button>
+</div>
+
+
+
+<!-- Audio Player -->
+<div class="audio-player" style="display: none;">
+	<audio id="audio" src="audio.mp3" loop></audio>
+	<button id="play-btn">Play</button>
+	<button id="pause-btn">Pause</button>
+</div>
+	
+	<script src="script.js"></script>
+</body>
+</html>

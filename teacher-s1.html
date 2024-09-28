@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Topics</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hide the okay button initially */
+        .okay-btn {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <nav>
+            <ul>
+                <li><a href="#" id="home-btn">Home</a></li>
+                <li><a href="#" id="back-btn">Back</a></li>
+                <li><a href="#" id="audio-btn">Audio</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="topics-container">
+        <h2>INTRODUCTION TO ICT</h2>
+        <select id="intro-select">
+            <option value="">Select a subtopic</option>
+            <option value="mean.html">Meaning of ICT</option>
+            <option value="comp.html">ICT and a computer</option>
+            <option value="cycle.html">INFORMATION PROCESSING CYCLE</option>
+            <option value="uses.html">uses of ICT in society</option>
+           <option value="care.html">care and saftey for ict</option>
+           <option value="test1.html">TEST AND ANSWERS</option>
+            
+
+          </select>
+
+        <button class="okay-btn" id="intro-okay-btn">Okay</button>
+
+     
+        <h2>COMPUTER HARDWARE AND SYSTEM STARTUP</h2>
+        <select id="hardware-select">
+            <option value="">Select a subtopic</option>
+            <option value="hardware.html">meaning of hardware</option>
+            <option value="hardware1.html">computer system Assembling and start up</option>
+            <option value="hardware2.html">TEST AND ANSWERS</option>
+            
+          </select>
+          <button class="okay-btn" id="new-okay-btn">Okay</button>
+        <h2>FILE AND FOLDER MANAGEMENT</h2>
+        <select id="new-select">
+            <option value="">Select a subtopic</option>
+            <option value="file.html">Introduction to File and Folder Management</option>
+            <option value="file1.html">Creating and Saving a file using a programs</option>
+            <option value="file2.html">File Extension</option>
+            <option value="file3.html">trensfering files bewteen  Diffrent storage media</option>
+            <option value="file4.html">Measurment of computer memory</option>
+            <option value="file5.html">Using the WordPad Program</option>    
+            <option value="file6.html">TEST AND ANSWERS</option>
+            
+          </select>
+          <button class="okay-btn" id="new-okay-btn">Okay</button>
+
+
+          <h2>WORD PROCESSING</h2>
+          <select id="new-select">
+              <option value="">Select a subtopic</option>
+              <option value="word1.html">Introduction</option>
+              <option value="word2.html">Formating and Editing Text</option>
+              <option value="word3.html">Formating a Word Document</option>
+              <option value="word4.html">Working with Objects in a Word Document</option>
+              <option value="word5.html">Inserting shapes in MS Word</option>
+              <option value="word6.html">Using Images in MS Word</option>
+              <option value="word7.html">Symbols in MS Word</option>
+              <option value="word8.htmll">Word Art</option>
+              <option value="word9.html">Header and Footer</option>
+              <option value="word10.htmll">Printing a Document</option>
+              <option value="word11.html">TEST AND ANSWERS</option>
+            
+            
+            </select>
+            <button class="okay-btn" id="new-okay-btn">Okay</button>
+
+
+         
+    </div>
+
+    <script>
+        // Show the okay button when a subtopic is selected
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', () => {
+                if (select.value !== '') {
+                    select.nextElementSibling.style.display = 'block';
+                } else {
+                    select.nextElementSibling.style.display = 'none';
+                }
+            });
+        });
+
+        // Handle the okay button click
+        document.querySelectorAll('.okay-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Get the selected subtopic value
+                const selectedValue = btn.previousElementSibling.value;
+                // Redirect to the next page
+                window.location.href = selectedValue;
+            });
+        });
+    </script>
+</body>
+</html>

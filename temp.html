@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cover">
+        <nav>
+            <ul>
+                <li><a href="student-s1.html" id="home-btn">Home</a></li>
+                <li><a href="topics1.html" id="back-btn">Back</a></li>
+                <li><a href="#" id="audio-btn" onclick="toggleAudio()">Audio</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="topics-container">
+	<!-- Your content here -->
+    </div>
+
+    <div class="audio-player" style="display: none;">
+        <audio controls>
+          <source src="audio/cycle.wav" type="audio/mp3">
+        </audio>
+      </div>
+
+    <script>
+        function toggleAudio() {
+            var audioPlayer = document.querySelector('.audio-player');
+            if (audioPlayer.style.display === 'none') {
+                audioPlayer.style.display = 'block';
+            } else {
+                audioPlayer.style.display = 'none';
+            }
+        }
+    </script>
+    </div>
+    <div class="topics-container">
+
+        
+    </div>
+</body>
+</html>

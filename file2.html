@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>File Extensions Notes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cover">
+        <nav>
+            <ul>
+                <li><a href="student-s1.html" id="home-btn">Home</a></li>
+                <li><a href="topics1.html" id="back-btn">Back</a></li>
+                <li><a href="#" id="audio-btn" onclick="toggleAudio()">Audio</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="topics-container">
+	<!-- Your content here -->
+	<h1>File Extensions Notes</h1>
+	<h2>What is a file extension?</h2>
+	<p>A file extension is a set of characters added to the end of a file name to indicate the file's format or type.</p>
+	<h2>Common File Extensions</h2>
+	<h3>Document files:</h3>
+	<ul>
+		<li><code>.docx</code> (Microsoft Word document)</li>
+		<li><code>.pdf</code> (Portable Document Format)</li>
+		<li><code>.txt</code> (Plain text file)</li>
+	</ul>
+	<h3>Image files:</h3>
+	<ul>
+		<li><code>.jpg</code> or <code>.jpeg</code> (Joint Photographic Experts Group image)</li>
+		<li><code>.png</code> (Portable Network Graphics image)</li>
+		<li><code>.gif</code> (Graphics Interchange Format image)</li>
+	</ul>
+	<h3>Audio files:</h3>
+	<ul>
+		<li><code>.mp3</code> (MPEG Audio Layer 3 file)</li>
+		<li><code>.wav</code> (Waveform Audio File Format)</li>
+	</ul>
+	<h3>Video files:</h3>
+	<ul>
+		<li><code>.mp4</code> (MPEG-4 video file)</li>
+		<li><code>.avi</code> (Audio Video Interleave file)</li>
+	</ul>
+	<h3>Compressed files:</h3>
+	<ul>
+		<li><code>.zip</code> (Zip archive file)</li>
+		<li><code>.rar</code> (RAR archive file)</li>
+	</ul>
+	<h3>Executable files:</h3>
+	<ul>
+		<li><code>.exe</code> (Executable file for Windows)</li>
+		<li><code>.app</code> (Executable file for macOS)</li>
+	</ul>
+	<h2>Other notable file extensions:</h2>
+	<ul>
+		<li><code>.html</code> or <code>.htm</code> (Hypertext Markup Language file)</li>
+		<li><code>.css</code> (Cascading Style Sheets file)</li>
+		<li><code>.js</code> (JavaScript file)</li>
+		<li><code>.csv</code> (Comma Separated Values file)</li>
+	</ul>
+	<h2>Remember:</h2>
+	<ul>
+		<li>File extensions can be hidden or shown in file names, depending on the operating system settings.</li>
+		<li>Some files may have multiple extensions (e.g., <code>file.tar.gz</code>).</li>
+		<li>Be cautious when opening files with unknown extensions, as they may contain malware.</li>
+	</ul>
+
+    </div>
+
+    <div class="audio-player" style="display: none;">
+        <audio controls>
+          <source src="audio/file3.wav" type="audio/mp3">
+        </audio>
+      </div>
+
+    <script>
+        function toggleAudio() {
+            var audioPlayer = document.querySelector('.audio-player');
+            if (audioPlayer.style.display === 'none') {
+                audioPlayer.style.display = 'block';
+            } else {
+                audioPlayer.style.display = 'none';
+            }
+        }
+    </script>
+    </div>
+    <div class="topics-container">
+
+        
+    </div>
+</body>
+</html>
